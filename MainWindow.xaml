@@ -1,7 +1,7 @@
 ﻿<Window x:Name="frm_main" x:Class="desktop_integration_test2.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="LearnWPF.BorderlessWindow" Height="522" 
+    Title="active_desktop" Height="522" 
     WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True"
     Background="Transparent" WindowState="Normal" ShowInTaskbar="False" FontFamily="Headline R" VerticalAlignment="Center" HorizontalAlignment="Right" SizeToContent="Width" Width="483" IsEnabled="False"
 >
@@ -16,6 +16,8 @@
         <TextBox x:Name="txt_username" HorizontalAlignment="Left" Margin="65,245,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" BorderBrush="{x:Null}" Foreground="#FFF54E30" Background="{x:Null}"/>
         <Label Content="GPU:" HorizontalAlignment="Left" Margin="20,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.529,0.528" Width="90" Height="21"/>
         <TextBox x:Name="txt_gpu" HorizontalAlignment="Left" Margin="65,202,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" BorderBrush="{x:Null}" Foreground="#FFF54E30" Background="{x:Null}" Height="32" TextChanged="txt_gpu_TextChanged"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="20,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.529,0.528" Width="90" Height="21"/>
+        <TextBox x:Name="txt_date" HorizontalAlignment="Left" Margin="65,284,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="418" BorderBrush="{x:Null}" Foreground="#FFF54E30" Background="{x:Null}"/>
     </Grid>
 
 </Window>

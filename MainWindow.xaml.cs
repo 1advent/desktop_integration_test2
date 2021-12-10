@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 
 using System.Management;
 using System.Text;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace desktop_integration_test2
 {
@@ -47,10 +49,14 @@ namespace desktop_integration_test2
             int total_width = (int)SystemParameters.PrimaryScreenWidth;
             this.Left = total_width - 450;
             this.Top = 100;
-            
-
+            DispatcherTimer _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromMilliseconds(2000);
+            _timer.Tick += new EventHandler(delegate (object s, EventArgs a)
+            {
+                txt_date.Text = string.Format("Timer Ticked: {0}ms", Environment.TickCount);
+            });
+            _timer.Start();
         }
-
         private void txt_gpu_TextChanged(object sender, TextChangedEventArgs e)
         {
 
